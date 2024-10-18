@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Select an Option</h2>
+    <form method="post">
+        <div class="mt-3">
+            <button type="submit" name="option" value="qa_system" class="btn btn-primary">QA System</button>
+        </div>
+        <div class="mt-3">
+            <button type="submit" name="option" value="summarization" class="btn btn-secondary">Summarization</button>
+        </div>
+    </form>
+</div>
+{% endblock content %}
