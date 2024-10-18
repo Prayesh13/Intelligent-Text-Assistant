@@ -2,14 +2,34 @@
 
 {% block content %}
 <div class="container mt-5">
-    <h2>Select an Option</h2>
-    <form method="post">
-        <div class="mt-3">
-            <button type="submit" name="option" value="qa_system" class="btn btn-primary">QA System</button>
+    <h2 class="text-center mb-4">Select an Option</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Question Answering System</h3>
+                    <p class="card-text">
+                        The QA System allows you to ask questions and get precise answers from the input text. It uses advanced AI models to understand the context and provide relevant responses, making it ideal for information retrieval and knowledge extraction tasks.
+                    </p>
+                    <form method="post">
+                        <button type="submit" name="option" value="qa_system" class="btn btn-primary">Choose QA System</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="mt-3">
-            <button type="submit" name="option" value="summarization" class="btn btn-secondary">Summarization</button>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Text Summarizer</h3>
+                    <p class="card-text">
+                        The Text Summarizer helps condense long documents into brief summaries. It identifies key points and essential information, enabling quick comprehension of large texts. This tool is perfect for summarizing articles, reports, or other lengthy documents.
+                    </p>
+                    <form method="post">
+                        <button type="submit" name="option" value="summarization" class="btn btn-secondary">Choose Text Summarizer</button>
+                    </form>
+                </div>
+            </div>
         </div>
-    </form>
+    </div>
 </div>
 {% endblock content %}
