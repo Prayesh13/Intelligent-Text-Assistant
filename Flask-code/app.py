@@ -30,8 +30,19 @@ def close_db(error):
 @app.route("/")
 @app.route("/home")
 def home():
-    return render_template("home.html", title="Home")
+    return render_template("home.html")
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/services')
+def services():
+    return render_template('services.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
 
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
@@ -56,7 +67,7 @@ def signup():
 
             return redirect(url_for("home"))
 
-    return render_template("signup.html", title="Register", form=form)
+    return render_template("signup.html", form=form)
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -78,7 +89,7 @@ def login():
 
         return redirect(url_for("home"))
 
-    return render_template("login.html", title="Login", form=form)
+    return render_template("login.html", form=form)
 
 @app.route("/select_option", methods=["GET", "POST"])
 def select_option():
@@ -89,7 +100,7 @@ def select_option():
         elif selected_option == "summarization":
             return redirect(url_for("app_summary.index"))  # Redirect to Summarization
 
-    return render_template("select_option.html", title="Select Option")
+    return render_template("select_option.html")
 
 
 @app.route("/generate_text", methods=["GET", "POST"])
@@ -104,7 +115,7 @@ def generate_text():
         generated_text = "Sample Generated Text"  # Replace with actual generation logic
         session['history'].append(generated_text)
 
-    return render_template("generate_text.html", title="Generate Text", history=session['history'])
+    return render_template("generate_text.html", history=session['history'])
 
 
 if __name__ == "__main__":

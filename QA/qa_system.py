@@ -17,7 +17,12 @@ def process_questions(questions_input, context):
     for question in questions_input[:5]:
         question = question.strip()
         if question:  # Only process non-empty questions
-            result = qa_pipeline(question=question, context=context)
+            result = qa_pipeline(question=question, context=context,
+                                 max_answer_len=100,  # Adjust this to increase answer length
+                                 min_answer_len=50,  # Adjust this to set a minimum length
+                                 max_seq_len=512,  # Ensure the context is fully considered
+                                 top_k=1
+                                 )
             answers.append((question, result['answer']))  # Store tuple of question and answer
 
             # Insert question and answer into the database

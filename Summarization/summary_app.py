@@ -36,6 +36,6 @@ def summarize():
         # Summarize the extracted text or entered text
         summary = summarize_text(text)
 
-    return render_template('summary.html', summary=summary, error=error)
+    return render_template('summary.html',summary=summary, error=error)
 
 os.makedirs("uploads", exist_ok=True)
