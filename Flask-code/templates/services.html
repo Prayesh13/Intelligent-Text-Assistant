@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+{% block title %}Services{% endblock %}
+{% block content %}
+<style>
+    .services-section {
+        background: linear-gradient(to bottom right, #d3dce6, #a9b8d4);
+        padding: 60px 0;
+    }
+
+    .services-header {
+        font-weight: 700;
+        color: #343a40;
+        margin-bottom: 40px;
+        text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .services-description {
+        font-size: 1.1rem;
+        color: #6c757d;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .service-card {
+        background: linear-gradient(to bottom, #ffffff, #f1f4f9);
+        border: none;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        padding: 30px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 100%; /* Full width of each card */
+        height: 280px
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-card-title {
+        font-size: 1.5rem;
+        color: #0056b3;
+        margin-bottom: 15px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-card-text {
+        font-size: 1rem;
+        color: #6c757d;
+        line-height: 1.6;
+    }
+
+    .btn-primary, .btn-secondary {
+        background: linear-gradient(to right, #004d99, #0056b3);
+        color: #fff;
+        border: none;
+    }
+
+    .btn-primary:hover, .btn-secondary:hover {
+        background: linear-gradient(to right, #002b5c, #004d99);
+        transform: scale(1.05);
+    }
+
+    .row {
+        margin-top: 40px;
+    }
+
+    .col-lg-6 {
+        max-width: 50%; /* Two services per row */
+    }
+</style>
+
+<div class="services-section">
+    <div class="container">
+        <h2 class="services-header text-center">Our Services</h2>
+        <p class="services-description">
+            We offer a variety of advanced AI-driven services, including QA Systems and Text Summarization. These services use cutting-edge technologies to streamline your processes and optimize your data workflows. Both systems support PDF input for better flexibility.
+        </p>
+
+        <div class="row">
+            <!-- Service 1: QA System -->
+            <div class="col-lg-6 mb-4">
+                <div class="service-card">
+                    <h3 class="service-card-title">QA System</h3>
+                    <p class="service-card-text">
+                        Our QA System is designed to enhance customer service and business processes by automatically answering questions from documents. The system supports input from PDFs, extracting relevant information to provide accurate and context-aware responses.
+                    </p>
+
+<!--                    <form method="post">-->
+<!--                        <button type="submit" name="option" value="qa_system" class="btn btn-primary">-->
+<!--                            <i class="fas fa-arrow-right"></i> Choose QA System-->
+<!--                        </button>-->
+<!--                    </form>-->
+                </div>
+            </div>
+
+            <!-- Service 2: Text Summarization -->
+            <div class="col-lg-6 mb-4">
+                <div class="service-card">
+                    <h3 class="service-card-title">Text Summarization</h3>
+                    <p class="service-card-text">
+                        Our Text Summarization service provides concise summaries of lengthy text documents, including PDF inputs. This system uses advanced NLP techniques to extract key points, saving you time while ensuring you never miss important details.
+                    </p>
+                    <br>
+<!--                    <form method="post">-->
+<!--                        <button type="submit" name="option" value="summarization" class="btn btn-secondary">-->
+<!--                            <i class="fas fa-arrow-right"></i> Choose Text Summarizer-->
+<!--                        </button>-->
+<!--                    </form>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
