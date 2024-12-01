@@ -30,7 +30,7 @@
         padding: 30px;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         width: 100%; /* Full width of each card */
-        height: 280px
+        height: 280px;
     }
 
     .service-card:hover {
@@ -86,12 +86,11 @@
                     <p class="service-card-text">
                         Our QA System is designed to enhance customer service and business processes by automatically answering questions from documents. The system supports input from PDFs, extracting relevant information to provide accurate and context-aware responses.
                     </p>
-
-<!--                    <form method="post">-->
-<!--                        <button type="submit" name="option" value="qa_system" class="btn btn-primary">-->
-<!--                            <i class="fas fa-arrow-right"></i> Choose QA System-->
-<!--                        </button>-->
-<!--                    </form>-->
+                    <form method="post" action="{{ url_for('app_qa.index') }}">
+                        <button type="submit" name="option" value="qa_system" class="btn btn-primary">
+                            <i class="fas fa-arrow-right"></i> Choose QA System
+                        </button>
+                    </form>
                 </div>
             </div>
 
@@ -102,12 +101,11 @@
                     <p class="service-card-text">
                         Our Text Summarization service provides concise summaries of lengthy text documents, including PDF inputs. This system uses advanced NLP techniques to extract key points, saving you time while ensuring you never miss important details.
                     </p>
-                    <br>
-<!--                    <form method="post">-->
-<!--                        <button type="submit" name="option" value="summarization" class="btn btn-secondary">-->
-<!--                            <i class="fas fa-arrow-right"></i> Choose Text Summarizer-->
-<!--                        </button>-->
-<!--                    </form>-->
+                    <form method="post" action="{{ url_for('app_summary.summarize') }}">
+                        <button type="submit" name="option" value="summarization" class="btn btn-secondary">
+                            <i class="fas fa-arrow-right"></i> Choose Text Summarizer
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>

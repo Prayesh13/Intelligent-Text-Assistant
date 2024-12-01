@@ -9,7 +9,7 @@ app_summary = Blueprint('app_summary', __name__)
 def index():
     return render_template('summary.html')
 
-@app_summary.route('/summarize', methods=['POST'])
+@app_summary.route('/summarize', methods=['GET','POST'])
 def summarize():
     text = None
     summary = None
