@@ -1,0 +1,4 @@
+title: "Text Summarization and QA System"
+emoji: "📝"
+app_file: app.py  # or the name of your Python file
+sdk: python  # since Flask is based on Python
