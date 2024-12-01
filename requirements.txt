@@ -1,7 +1,5 @@
 flask
-mysql-connector-python
+pdfplumber
 transformers
-pymongo
 wtforms
-dnspython
 gunicorn
