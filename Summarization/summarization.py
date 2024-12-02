@@ -8,7 +8,7 @@ def extract_text_from_pdf(pdf_path):
         text += page.get_text()
     return text
 
-MODEL_PATH = r"D:\Model-scet\Model\Facebook-Bert"  # Change this to your model path
+MODEL_PATH = r"model/Facebook-Bert"  # Change this to your model path
 tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
 model = AutoModelForSeq2SeqLM.from_pretrained(MODEL_PATH)
 
@@ -18,5 +18,3 @@ def summarize_text(text):
     summary_ids = model.generate(inputs, max_length=270, min_length=160, length_penalty=2.0, num_beams=4, early_stopping=True)
     summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
     return summary
-
-

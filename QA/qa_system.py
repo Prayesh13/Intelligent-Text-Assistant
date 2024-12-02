@@ -2,7 +2,7 @@ from transformers import pipeline, AutoModelForQuestionAnswering, AutoTokenizer
 from QA.database import insert_question_answer
 
 # Load the saved model and tokenizer
-model_path = r"D:\Model-scet\Model\QA_Model"  # Ensure this path matches where you saved the model
+model_path = r"model\QA_Model"  # Ensure this path matches where you saved the model
 model = AutoModelForQuestionAnswering.from_pretrained(model_path)
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 
