@@ -1,5 +1,5 @@
 flask
-pdfplumber
+pymupdf
 transformers
 wtforms
 gunicorn
